@@ -28,21 +28,22 @@ A modular CodeIgniter 3 productivity toolkit featuring a to-do app, debts tracke
 7. Start XAMPP/Apache and go to `http://localhost/smarty_toolkit`.
 
 ## Usage
-- **Dashboard**: See an overview of your todos, debts, and reminders (`/dashboard`)
+
+- **Dashboard**: See an overview of your todos, debts, and reminders (`/dashboard`). Mark todos as completed directly from the dashboard.
 - **Todos**: Add, edit, or delete to-dos with due dates and mark as done (`/todos`)
 - **Debts**: Track who owes you money, set due dates, mark as paid, and get reminders (`/debts`)
 - **Planner**: View all your todos and debts in a monthly calendar, with navigation and quick actions (`/todos/planner`)
-- **Themes**: Instantly switch between 10 color themes using the Theme dropdown in the navbar
+
 
 ## Theme Customization
-Edit or add CSS files in `assets/themes/` and use the theme dropdown in the navbar to select your preferred look.
+Edit or add CSS files in `assets/themes/`. Theme selection is now managed via user settings, not the main menu.
 
 ## Navigation
 - Dashboard
 - Todos
 - Planner
 - Debts
-- Theme switcher
+- Settings
 - Logout/Login/Register
 
 ## Database Migrations
