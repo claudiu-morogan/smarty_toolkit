@@ -3,7 +3,6 @@
 <head>
     <title><?php echo isset($title) ? $title : 'To-Do App'; ?></title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php echo base_url('assets/css/base.css'); ?>">
   <?php
     $CI =& get_instance();
     $theme = $CI->session->userdata('theme');

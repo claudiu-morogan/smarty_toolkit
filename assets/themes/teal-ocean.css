@@ -1,45 +1,5 @@
-
-/* Theme: Teal Ocean - Modern Glassmorphism */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-body {
-		background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-		font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-		color: #0a3c3a;
-}
-.navbar {
-		background: #11998e !important;
-	backdrop-filter: blur(8px);
-	box-shadow: 0 4px 24px 0 rgba(17,153,142,0.10);
-	border-radius: 18px;
-	margin-top: 16px;
-}
-.container, .card, .list-group-item, .table {
-		background: #fff !important;
-	border-radius: 18px;
-	box-shadow: 0 8px 32px 0 rgba(17,153,142,0.10);
-	backdrop-filter: blur(6px);
-}
-.btn-primary, .btn-success {
-		background: #11998e;
-	border: none;
-	color: #fff;
-	border-radius: 12px;
-	box-shadow: 0 2px 8px 0 rgba(17,153,142,0.10);
-	transition: transform 0.1s, box-shadow 0.1s;
-}
-.btn-primary:hover, .btn-success:hover {
-	transform: translateY(-2px) scale(1.04);
-	box-shadow: 0 6px 18px 0 rgba(17,153,142,0.18);
-}
-.list-group-item-success {
-		background: #e0fff7 !important;
-	color: #11998e;
-	border-radius: 12px !important;
-	box-shadow: 0 2px 8px 0 rgba(67,233,123,0.10);
-}
-input, textarea, select {
-		border-radius: 8px !important;
-		border: 1px solid #38f9d7 !important;
-		background: #fff !important;
-		color: #0a3c3a !important;
-}
+/* Theme: Teal Ocean */
+body { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.navbar { background: #11998e !important; }
+.btn-primary, .btn-success { background: #38f9d7; color: #fff; }
+.list-group-item-success { background: #43e97b; color: #11998e; }
