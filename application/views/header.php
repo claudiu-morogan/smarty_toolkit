@@ -43,6 +43,7 @@
                 <li class="nav-item"><a class="nav-link" href="<?php echo site_url('todos'); ?>">Todos</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo site_url('todos/planner'); ?>">Planner</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo site_url('debts'); ?>">Debts</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo site_url('settings'); ?>">Settings</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo site_url('auth/logout'); ?>">Logout</a></li>
             <?php else: ?>
               <li class="nav-item"><a class="nav-link" href="<?php echo site_url('auth/login'); ?>">Login</a></li>
