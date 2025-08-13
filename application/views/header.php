@@ -1,3 +1,4 @@
+<?php $compact_mode = false; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,9 +28,24 @@
     $theme_file = isset($theme_files[$theme]) ? $theme_files[$theme]['file'] : $theme_files[1]['file'];
   ?>
   <link rel="stylesheet" href="<?php echo base_url('assets/themes/' . $theme_file); ?>">
+  <?php if ($compact_mode): ?>
+    <link rel="stylesheet" href="<?php echo base_url('assets/themes/compact-mode.css'); ?>">
+  <?php endif; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<?php
+  $compact_mode = false;
+  if (isset($CI) && method_exists($CI, 'load') && $this->session->userdata('user_id')) {
+    if (!isset($CI->User_model)) {
+      $CI->load->model('User_model');
+    }
+    if (isset($CI->User_model)) {
+      $prefs = $CI->User_model->get_preferences($this->session->userdata('user_id'));
+      $compact_mode = !empty($prefs['compact_mode']);
+    }
+  }
+?>
+<body<?php if ($compact_mode) echo ' class="compact-mode"'; ?>>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
       <div class="container">
         <a class="navbar-brand" href="<?php echo site_url('todos'); ?>">To-Do App</a>
@@ -49,16 +65,6 @@
               <li class="nav-item"><a class="nav-link" href="<?php echo site_url('auth/login'); ?>">Login</a></li>
               <li class="nav-item"><a class="nav-link" href="<?php echo site_url('auth/register'); ?>">Register</a></li>
             <?php endif; ?>
-            <li class="nav-item dropdown ms-3">
-              <a class="nav-link dropdown-toggle" href="#" id="themeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Theme
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="themeDropdown">
-                <?php foreach ($theme_files as $i => $t): ?>
-                  <li><a class="dropdown-item<?php if ($theme == $i) echo ' active'; ?>" href="<?php echo site_url('theme/set/' . $i); ?>"><?php echo $t['name']; ?></a></li>
-                <?php endforeach; ?>
-              </ul>
-            </li>
           </ul>
         </div>
       </div>

@@ -17,4 +17,14 @@ class Dashboard extends CI_Controller {
         $data['reminders'] = $this->Debt_model->get_reminders($user_id);
         $this->load->view('dashboard/index', $data);
     }
+
+    // Mark a todo as completed from dashboard
+    public function mark_done($id) {
+        $user_id = $this->session->userdata('user_id');
+        $todo = $this->Todo_model->get($id, $user_id);
+        if ($todo) {
+            $this->Todo_model->update($id, $user_id, ['is_done' => 1]);
+        }
+        redirect('dashboard');
+    }
 }

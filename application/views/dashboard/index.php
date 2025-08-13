@@ -46,10 +46,16 @@
                             </div>
                             <div><?php echo nl2br(htmlspecialchars($todo->description)); ?></div>
                         </div>
-                        <div>
-                            <a href="<?php echo site_url('todos/edit/'.$todo->id); ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
-                            <a href="<?php echo site_url('todos/delete/'.$todo->id); ?>" class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this todo?');">Delete</a>
-                        </div>
+                                                <div>
+                                                        <a href="<?php echo site_url('todos/edit/'.$todo->id); ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                                        <a href="<?php echo site_url('todos/delete/'.$todo->id); ?>" class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this todo?');">Delete</a>
+                                                        <?php if (empty($todo->is_done)): ?>
+                                                            <form method="post" action="<?php echo site_url('dashboard/mark_done/'.$todo->id); ?>" style="display:inline;">
+                                                                <input type="hidden" name="mark_done" value="1">
+                                                                <button type="submit" class="btn btn-sm btn-success ms-1">Mark Completed</button>
+                                                            </form>
+                                                        <?php endif; ?>
+                                                </div>
                     </li>
                 <?php endforeach; ?>
             </ul>
