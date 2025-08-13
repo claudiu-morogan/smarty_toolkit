@@ -1,0 +1,5 @@
+/* Theme: Blue Gradient */
+body { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); font-family: 'Segoe UI', 'Roboto', Arial, sans-serif; }
+.navbar { background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important; }
+.btn-primary, .btn-success { background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%); }
+.list-group-item-success { background: linear-gradient(90deg, #a8ff78 0%, #78ffd6 100%) !important; color: #1e3c72; }

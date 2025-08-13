@@ -1,0 +1,5 @@
+/* Theme: Dark Mode */
+body { background: #181818; color: #f1f1f1; }
+.navbar { background: #232526 !important; }
+.btn-primary, .btn-success { background: #232526; color: #f1f1f1; }
+.list-group-item-success { background: #333; color: #a8ff78; }

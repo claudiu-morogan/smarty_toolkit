@@ -1,3 +1,7 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Todos extends CI_Controller {
     public function planner() {
         $user_id = $this->session->userdata('user_id');
         $todos = $this->Todo_model->get_all($user_id);
@@ -16,10 +20,6 @@
         $data['todos'] = $week;
         $this->load->view('todos/planner', $data);
     }
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Todos extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('Todo_model');

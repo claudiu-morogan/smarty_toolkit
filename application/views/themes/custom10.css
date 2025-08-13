@@ -1,0 +1,5 @@
+/* Theme 10: Classic White */
+body { background: #fff; color: #222; }
+.navbar { background: #f8f9fa !important; color: #222; }
+.btn-primary, .btn-success { background: #222; color: #fff; }
+.list-group-item-success { background: #f8f9fa; color: #222; }

@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+    box-shadow: 0 2px 8px rgba(30,60,114,0.08);
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff !important;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link {
+    color: #e0e7ef !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.2s;
+}
+
+.navbar .nav-link.active, .navbar .nav-link:hover {
+    color: #ffd700 !important;
+}
+
+.card {
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(30,60,114,0.10);
+    border: none;
+}
+
+.btn-primary, .btn-success {
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 2rem;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover, .btn-success:hover {
+    background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
+}
+
+.alert-info {
+    background: #e3f0ff;
+    color: #1e3c72;
+    border: none;
+    border-radius: 1rem;
+}
+
+.list-group-item {
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(30,60,114,0.04);
+}
+
+.list-group-item-success {
+    background: linear-gradient(90deg, #a8ff78 0%, #78ffd6 100%) !important;
+    color: #1e3c72;
+}
+
+.table thead th {
+    background: #2a5298;
+    color: #fff;
+    border: none;
+}
+
+.table-bordered td, .table-bordered th {
+    border-color: #b3c6e0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #e3f0ff;
+}
+::-webkit-scrollbar-thumb {
+    background: #b3c6e0;
+    border-radius: 4px;
+}

@@ -1,0 +1,5 @@
+/* Theme 9: Teal Ocean */
+body { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.navbar { background: #11998e !important; }
+.btn-primary, .btn-success { background: #38f9d7; color: #fff; }
+.list-group-item-success { background: #43e97b; color: #11998e; }

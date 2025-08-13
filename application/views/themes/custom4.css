@@ -1,0 +1,5 @@
+/* Theme 4: Purple Dream */
+body { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
+.navbar { background: #6a11cb !important; }
+.btn-primary, .btn-success { background: #2575fc; color: #fff; }
+.list-group-item-success { background: #e0c3fc; color: #6a11cb; }

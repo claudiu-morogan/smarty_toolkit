@@ -1,0 +1,5 @@
+/* Theme: Pink Candy */
+body { background: linear-gradient(135deg, #fcb7b7 0%, #ffdde1 100%); }
+.navbar { background: #ff6a88 !important; }
+.btn-primary, .btn-success { background: #ff99ac; color: #fff; }
+.list-group-item-success { background: #ffdde1; color: #ff6a88; }

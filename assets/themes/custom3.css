@@ -1,0 +1,5 @@
+/* Theme 3: Green Pastel */
+body { background: linear-gradient(135deg, #e0ffe0 0%, #b2f7b8 100%); }
+.navbar { background: #43cea2 !important; }
+.btn-primary, .btn-success { background: #185a9d; color: #fff; }
+.list-group-item-success { background: #b2f7b8; color: #185a9d; }

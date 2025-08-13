@@ -1,4 +1,4 @@
-$route['todos/planner'] = 'todos/planner';
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -53,3 +53,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['todos/planner'] = 'todos/planner';
+$route['theme/set/(:num)'] = 'theme/set/$1';

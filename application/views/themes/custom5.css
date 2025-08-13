@@ -1,0 +1,5 @@
+/* Theme 5: Sunset Orange */
+body { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+.navbar { background: #ff512f !important; }
+.btn-primary, .btn-success { background: #dd2476; color: #fff; }
+.list-group-item-success { background: #fcb69f; color: #ff512f; }

@@ -1,0 +1,5 @@
+/* Theme: Yellow Lemonade */
+body { background: linear-gradient(135deg, #fffde4 0%, #f9f9d2 100%); }
+.navbar { background: #f7971e !important; }
+.btn-primary, .btn-success { background: #ffd200; color: #fff; }
+.list-group-item-success { background: #f9f9d2; color: #f7971e; }

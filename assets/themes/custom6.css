@@ -1,0 +1,5 @@
+/* Theme 6: Aqua Blue */
+body { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+.navbar { background: #2193b0 !important; }
+.btn-primary, .btn-success { background: #6dd5ed; color: #fff; }
+.list-group-item-success { background: #c2e9fb; color: #2193b0; }

@@ -21,6 +21,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->library('session');
+		$this->load->helper('url');
 		if ($this->session->userdata('user_id')) {
 			redirect('todos');
 		} else {
