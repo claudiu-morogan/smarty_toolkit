@@ -2,25 +2,25 @@
 /* Theme: Purple Dream - Modern Glassmorphism */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 body {
-	background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-	color: #6a11cb;
+		background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+		font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+		color: #3d1566;
 }
 .navbar {
-	background: rgba(106,17,203,0.85) !important;
+		background: #6a11cb !important;
 	backdrop-filter: blur(8px);
 	box-shadow: 0 4px 24px 0 rgba(106,17,203,0.10);
 	border-radius: 18px;
 	margin-top: 16px;
 }
 .container, .card, .list-group-item, .table {
-	background: rgba(255,255,255,0.7) !important;
+		background: #fff !important;
 	border-radius: 18px;
 	box-shadow: 0 8px 32px 0 rgba(106,17,203,0.10);
 	backdrop-filter: blur(6px);
 }
 .btn-primary, .btn-success {
-	background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+		background: #6a11cb;
 	border: none;
 	color: #fff;
 	border-radius: 12px;
@@ -32,13 +32,14 @@ body {
 	box-shadow: 0 6px 18px 0 rgba(106,17,203,0.18);
 }
 .list-group-item-success {
-	background: #e0c3fc !important;
+		background: #f3e6ff !important;
 	color: #6a11cb;
 	border-radius: 12px !important;
 	box-shadow: 0 2px 8px 0 rgba(224,195,252,0.10);
 }
 input, textarea, select {
-	border-radius: 8px !important;
-	border: 1px solid #b39ddb !important;
-	background: rgba(255,255,255,0.8) !important;
+		border-radius: 8px !important;
+		border: 1px solid #b39ddb !important;
+		background: #fff !important;
+		color: #3d1566 !important;
 }

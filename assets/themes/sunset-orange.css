@@ -2,25 +2,25 @@
 /* Theme: Sunset Orange - Modern Glassmorphism */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 body {
-	background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-	color: #ff512f;
+		background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+		font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+		color: #a13a1a;
 }
 .navbar {
-	background: rgba(255,81,47,0.85) !important;
+		background: #ff512f !important;
 	backdrop-filter: blur(8px);
 	box-shadow: 0 4px 24px 0 rgba(255,81,47,0.10);
 	border-radius: 18px;
 	margin-top: 16px;
 }
 .container, .card, .list-group-item, .table {
-	background: rgba(255,255,255,0.7) !important;
+		background: #fff !important;
 	border-radius: 18px;
 	box-shadow: 0 8px 32px 0 rgba(255,81,47,0.10);
 	backdrop-filter: blur(6px);
 }
 .btn-primary, .btn-success {
-	background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+		background: #ff512f;
 	border: none;
 	color: #fff;
 	border-radius: 12px;
@@ -32,13 +32,14 @@ body {
 	box-shadow: 0 6px 18px 0 rgba(255,81,47,0.18);
 }
 .list-group-item-success {
-	background: #fcb69f !important;
+		background: #ffecd2 !important;
 	color: #ff512f;
 	border-radius: 12px !important;
 	box-shadow: 0 2px 8px 0 rgba(252,182,159,0.10);
 }
 input, textarea, select {
-	border-radius: 8px !important;
-	border: 1px solid #ffb199 !important;
-	background: rgba(255,255,255,0.8) !important;
+		border-radius: 8px !important;
+		border: 1px solid #ffb199 !important;
+		background: #fff !important;
+		color: #a13a1a !important;
 }
