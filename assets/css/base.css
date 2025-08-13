@@ -1,0 +1,65 @@
+/* Base UI styles: accessibility, spacing, readable defaults */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+html, body {
+  height: 100%;
+}
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Headings & links */
+h1, h2, h3, h4, h5 { color: #222; font-weight: 600; }
+a { color: #0d6efd; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Layout */
+.container {
+  padding-bottom: 32px;
+}
+
+/* Cards, lists, tables */
+.card, .list-group-item, .table {
+  border: 0 !important;
+  border-radius: 14px !important;
+}
+.list-group-item + .list-group-item {
+  margin-top: 8px;
+}
+.table thead th {
+  font-weight: 600;
+}
+.table tbody tr:hover {
+  filter: brightness(0.98);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  transition: transform 0.08s ease-out, box-shadow 0.12s ease-out;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn:focus { outline: 3px solid rgba(0,0,0,0.12); outline-offset: 2px; }
+
+/* Forms */
+input.form-control, textarea.form-control, select.form-select, select.form-control {
+  border-radius: 10px !important;
+  padding: 0.55rem 0.8rem !important;
+}
+input.form-control:focus, textarea.form-control:focus, select.form-select:focus, select.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.06);
+}
+label.form-label { font-weight: 600; }
+
+/* Navbar */
+.navbar { border-radius: 18px; margin-top: 16px; }
+.navbar .dropdown-menu { border-radius: 12px; border: 0; box-shadow: 0 10px 24px rgba(0,0,0,0.08); }
+.navbar .dropdown-item.active { font-weight: 600; }
+
+/* Utilities */
+.shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important; }
+.rounded-12 { border-radius: 12px !important; }
