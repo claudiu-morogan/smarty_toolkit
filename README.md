@@ -1,7 +1,30 @@
 
+
 # Smarty Toolkit
 
-A modular CodeIgniter 3 productivity toolkit featuring a to-do app, debts tracker, monthly planner, authentication, and a modern theme system.
+A modular CodeIgniter 3 productivity toolkit featuring:
+- To-do app
+- Debts tracker
+- Monthly planner/calendar (standalone and embeddable)
+- Notes module
+- Habits & Goals tracker
+- User authentication
+- Modern theme system
+
+## Features
+- User registration & login (authentication)
+- CRUD for to-dos with due dates and completion status
+- Debts module: track who owes you money, with reminders and payment status
+- Notes: simple note-taking module
+- Habits & Goals: track habits and goals
+- Dashboard: see all your todos, debts, notes, habits, and reminders in one place
+- Monthly planner calendar: view todos and debts by date, with navigation and quick actions
+- Calendar can be viewed standalone (with menu/theme) or embedded (dashboard)
+- 10 modern, switchable color themes (see `assets/themes/`)
+- Clean URLs (no index.php)
+- Responsive Bootstrap 5 UI
+
+## Installation
 
 ## Features
 - User registration & login (authentication)
@@ -27,27 +50,42 @@ A modular CodeIgniter 3 productivity toolkit featuring a to-do app, debts tracke
 6. Ensure `assets/themes/` is accessible by the web server.
 7. Start XAMPP/Apache and go to `http://localhost/smarty_toolkit`.
 
-## Usage
 
-- **Dashboard**: See an overview of your todos, debts, and reminders (`/dashboard`). Mark todos as completed directly from the dashboard.
+## Usage
+- **Dashboard**: Overview of all modules, with embedded calendar/planner (`/dashboard`).
 - **Todos**: Add, edit, or delete to-dos with due dates and mark as done (`/todos`)
 - **Debts**: Track who owes you money, set due dates, mark as paid, and get reminders (`/debts`)
+- **Notes**: Add, edit, and view notes (`/notes`)
+- **Habits & Goals**: Track and manage habits/goals (`/habits`)
 - **Planner**: View all your todos and debts in a monthly calendar, with navigation and quick actions (`/todos/planner`)
+
+## Recent Changes
+- Refactored calendar planner for standalone and embedded use
+- Fixed footer include bug in planner
+- Added `calendar_table.php` partial for calendar rendering
+- Dashboard now embeds the calendar without duplicating menu/theme
+
+
 
 
 ## Theme Customization
-Edit or add CSS files in `assets/themes/`. Theme selection is now managed via user settings, not the main menu.
+Edit or add CSS files in `assets/themes/`. Theme selection is managed via user settings.
+
 
 ## Navigation
 - Dashboard
 - Todos
 - Planner
 - Debts
+- Notes
+- Habits & Goals
 - Settings
 - Logout/Login/Register
 
+
 ## Database Migrations
-Migrations are provided for users, todos, and debts. Run all migrations before first use.
+Migrations are provided for all modules. Run all migrations before first use.
+
 
 ## License
 MIT
