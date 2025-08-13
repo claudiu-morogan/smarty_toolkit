@@ -1,0 +1,19 @@
+/* Compact mode: smaller font, tighter spacing */
+body.compact-mode {
+  font-size: 0.95rem;
+}
+body.compact-mode .container,
+body.compact-mode .card,
+body.compact-mode .list-group-item,
+body.compact-mode .table {
+  padding: 0.5rem 0.7rem !important;
+}
+body.compact-mode .btn,
+body.compact-mode .form-control,
+body.compact-mode .form-select {
+  padding: 0.3rem 0.7rem !important;
+  font-size: 0.95em;
+}
+body.compact-mode h1, body.compact-mode h2, body.compact-mode h3 {
+  font-size: 1.1em;
+}

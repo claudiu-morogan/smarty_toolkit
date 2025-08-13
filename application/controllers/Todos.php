@@ -31,7 +31,16 @@ class Todos extends CI_Controller {
     }
     public function index() {
         $user_id = $this->session->userdata('user_id');
-        $data['todos'] = $this->Todo_model->get_all($user_id);
+        $this->load->model('User_model');
+        $prefs = $this->User_model->get_preferences($user_id);
+        $show_completed = isset($prefs['show_completed']) ? $prefs['show_completed'] : 1;
+        $all_todos = $this->Todo_model->get_all($user_id);
+        if (!$show_completed) {
+            $todos = array_filter($all_todos, function($t) { return empty($t->is_done); });
+        } else {
+            $todos = $all_todos;
+        }
+        $data['todos'] = $todos;
         $this->load->view('todos/index', $data);
     }
     public function add() {

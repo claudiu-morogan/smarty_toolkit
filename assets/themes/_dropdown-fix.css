@@ -1,0 +1,25 @@
+/* Ensure Bootstrap dropdowns appear above themed navbars */
+.dropdown,
+.navbar,
+.container,
+.container-fluid {
+  overflow: visible !important;
+}
+.dropdown-menu {
+  z-index: 99999 !important;
+  position: fixed !important;
+  left: auto !important;
+  top: auto !important;
+  min-width: 180px;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.dropdown.show .dropdown-menu,
+.dropdown-menu.show {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
