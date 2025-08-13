@@ -1,5 +1,44 @@
-/* Theme: Yellow Lemonade */
-body { background: linear-gradient(135deg, #fffde4 0%, #f9f9d2 100%); }
-.navbar { background: #f7971e !important; }
-.btn-primary, .btn-success { background: #ffd200; color: #fff; }
-.list-group-item-success { background: #f9f9d2; color: #f7971e; }
+
+/* Theme: Yellow Lemonade - Modern Glassmorphism */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+body {
+	background: linear-gradient(135deg, #fffde4 0%, #f9f9d2 100%);
+	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+	color: #f7971e;
+}
+.navbar {
+	background: rgba(247,151,30,0.85) !important;
+	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 24px 0 rgba(247,151,30,0.10);
+	border-radius: 18px;
+	margin-top: 16px;
+}
+.container, .card, .list-group-item, .table {
+	background: rgba(255,255,255,0.7) !important;
+	border-radius: 18px;
+	box-shadow: 0 8px 32px 0 rgba(247,151,30,0.10);
+	backdrop-filter: blur(6px);
+}
+.btn-primary, .btn-success {
+	background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+	border: none;
+	color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px 0 rgba(247,151,30,0.10);
+	transition: transform 0.1s, box-shadow 0.1s;
+}
+.btn-primary:hover, .btn-success:hover {
+	transform: translateY(-2px) scale(1.04);
+	box-shadow: 0 6px 18px 0 rgba(247,151,30,0.18);
+}
+.list-group-item-success {
+	background: #f9f9d2 !important;
+	color: #f7971e;
+	border-radius: 12px !important;
+	box-shadow: 0 2px 8px 0 rgba(249,249,210,0.10);
+}
+input, textarea, select {
+	border-radius: 8px !important;
+	border: 1px solid #ffd200 !important;
+	background: rgba(255,255,255,0.8) !important;
+}

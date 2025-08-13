@@ -1,5 +1,44 @@
-/* Theme: Green Pastel */
-body { background: linear-gradient(135deg, #e0ffe0 0%, #b2f7b8 100%); }
-.navbar { background: #43cea2 !important; }
-.btn-primary, .btn-success { background: #185a9d; color: #fff; }
-.list-group-item-success { background: #b2f7b8; color: #185a9d; }
+
+/* Theme: Green Pastel - Modern Glassmorphism */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+body {
+	background: linear-gradient(135deg, #e0ffe0 0%, #b2f7b8 100%);
+	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+	color: #185a9d;
+}
+.navbar {
+	background: rgba(67,206,162,0.85) !important;
+	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 24px 0 rgba(67,206,162,0.10);
+	border-radius: 18px;
+	margin-top: 16px;
+}
+.container, .card, .list-group-item, .table {
+	background: rgba(255,255,255,0.7) !important;
+	border-radius: 18px;
+	box-shadow: 0 8px 32px 0 rgba(67,206,162,0.10);
+	backdrop-filter: blur(6px);
+}
+.btn-primary, .btn-success {
+	background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+	border: none;
+	color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px 0 rgba(67,206,162,0.10);
+	transition: transform 0.1s, box-shadow 0.1s;
+}
+.btn-primary:hover, .btn-success:hover {
+	transform: translateY(-2px) scale(1.04);
+	box-shadow: 0 6px 18px 0 rgba(67,206,162,0.18);
+}
+.list-group-item-success {
+	background: #b2f7b8 !important;
+	color: #185a9d;
+	border-radius: 12px !important;
+	box-shadow: 0 2px 8px 0 rgba(178,247,184,0.10);
+}
+input, textarea, select {
+	border-radius: 8px !important;
+	border: 1px solid #b2f7b8 !important;
+	background: rgba(255,255,255,0.8) !important;
+}

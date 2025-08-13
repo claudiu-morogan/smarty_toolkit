@@ -1,5 +1,45 @@
-/* Theme: Dark Mode */
-body { background: #181818; color: #f1f1f1; }
-.navbar { background: #232526 !important; }
-.btn-primary, .btn-success { background: #232526; color: #f1f1f1; }
-.list-group-item-success { background: #333; color: #a8ff78; }
+
+/* Theme: Dark Mode - Modern Glassmorphism */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+body {
+	background: linear-gradient(135deg, #232526 0%, #414345 100%);
+	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+	color: #f1f1f1;
+}
+.navbar {
+	background: rgba(35,37,38,0.92) !important;
+	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 24px 0 rgba(35,37,38,0.18);
+	border-radius: 18px;
+	margin-top: 16px;
+}
+.container, .card, .list-group-item, .table {
+	background: rgba(40,40,50,0.7) !important;
+	border-radius: 18px;
+	box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10);
+	backdrop-filter: blur(6px);
+}
+.btn-primary, .btn-success {
+	background: linear-gradient(90deg, #232526 0%, #414345 100%);
+	border: none;
+	color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px 0 rgba(35,37,38,0.10);
+	transition: transform 0.1s, box-shadow 0.1s;
+}
+.btn-primary:hover, .btn-success:hover {
+	transform: translateY(-2px) scale(1.04);
+	box-shadow: 0 6px 18px 0 rgba(35,37,38,0.18);
+}
+.list-group-item-success {
+	background: linear-gradient(90deg, #232526 0%, #a8ff78 100%) !important;
+	color: #232526;
+	border-radius: 12px !important;
+	box-shadow: 0 2px 8px 0 rgba(168,255,120,0.10);
+}
+input, textarea, select {
+	border-radius: 8px !important;
+	border: 1px solid #444 !important;
+	background: rgba(30,30,30,0.8) !important;
+	color: #f1f1f1 !important;
+}
