@@ -40,6 +40,29 @@
           <option value="de"<?php if (isset($language) && $language == 'de') echo ' selected'; ?>>Deutsch</option>
         </select>
       </div>
+      <div class="mb-3">
+        <label class="form-label">Dashboard Modules</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="dashboard_cards[todos]" id="card_todos" value="1"<?php if (empty($dashboard_cards) || !isset($dashboard_cards['todos']) || $dashboard_cards['todos']) echo ' checked'; ?>>
+          <label class="form-check-label" for="card_todos">To-Dos</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="dashboard_cards[debts]" id="card_debts" value="1"<?php if (empty($dashboard_cards) || !isset($dashboard_cards['debts']) || $dashboard_cards['debts']) echo ' checked'; ?>>
+          <label class="form-check-label" for="card_debts">Debts</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="dashboard_cards[notes]" id="card_notes" value="1"<?php if (empty($dashboard_cards) || !isset($dashboard_cards['notes']) || $dashboard_cards['notes']) echo ' checked'; ?>>
+          <label class="form-check-label" for="card_notes">Notes</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="dashboard_cards[habits]" id="card_habits" value="1"<?php if (empty($dashboard_cards) || !isset($dashboard_cards['habits']) || $dashboard_cards['habits']) echo ' checked'; ?>>
+          <label class="form-check-label" for="card_habits">Habits & Goals</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="dashboard_cards[calendar]" id="card_calendar" value="1"<?php if (empty($dashboard_cards) || !isset($dashboard_cards['calendar']) || $dashboard_cards['calendar']) echo ' checked'; ?>>
+          <label class="form-check-label" for="card_calendar">Calendar</label>
+        </div>
+      </div>
       <button type="submit" class="btn btn-primary">Save Preferences</button>
     </form>
   </div>

@@ -2,6 +2,7 @@
 
 <?php $title = 'Dashboard'; include APPPATH.'views/header.php'; ?>
 <div class="container py-4">
+    <?php if (!empty($dashboard_cards['calendar'])): ?>
     <div class="mb-4">
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
@@ -13,8 +14,10 @@
             </div>
         </div>
     </div>
+    <?php endif; ?>
     <div class="row g-4">
         <!-- Todos Card -->
+        <?php if (!empty($dashboard_cards['todos'])): ?>
         <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm">
                 <div class="card-body">
@@ -29,7 +32,9 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         <!-- Debts Card -->
+        <?php if (!empty($dashboard_cards['debts'])): ?>
         <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm">
                 <div class="card-body">
@@ -44,7 +49,9 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         <!-- Notes Card -->
+        <?php if (!empty($dashboard_cards['notes'])): ?>
         <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm">
                 <div class="card-body">
@@ -58,7 +65,9 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         <!-- Habits Card -->
+        <?php if (!empty($dashboard_cards['habits'])): ?>
         <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm">
                 <div class="card-body">
@@ -72,6 +81,7 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
     </div>
 
     <!-- Reminders Section -->
