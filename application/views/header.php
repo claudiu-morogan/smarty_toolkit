@@ -39,9 +39,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <?php if ($this->session->userdata('user_id')): ?>
-              <li class="nav-item"><a class="nav-link" href="<?php echo site_url('todos'); ?>">My Todos</a></li>
-              <li class="nav-item"><a class="nav-link" href="<?php echo site_url('todos/planner'); ?>">Weekly Planner</a></li>
-              <li class="nav-item"><a class="nav-link" href="<?php echo site_url('auth/logout'); ?>">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo site_url('dashboard'); ?>">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo site_url('todos'); ?>">Todos</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo site_url('todos/planner'); ?>">Planner</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo site_url('debts'); ?>">Debts</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo site_url('auth/logout'); ?>">Logout</a></li>
             <?php else: ?>
               <li class="nav-item"><a class="nav-link" href="<?php echo site_url('auth/login'); ?>">Login</a></li>
               <li class="nav-item"><a class="nav-link" href="<?php echo site_url('auth/register'); ?>">Register</a></li>
