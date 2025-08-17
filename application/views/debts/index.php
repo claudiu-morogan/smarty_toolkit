@@ -18,6 +18,7 @@
         <tr>
           <th>Name</th>
           <th>Amount</th>
+          <th>Contact</th>
           <th>Description</th>
           <th>Due Date</th>
           <th>Status</th>
@@ -29,6 +30,13 @@
           <tr>
             <td><?php echo htmlspecialchars($debt->debtor_name); ?></td>
             <td><?php echo number_format($debt->amount, 2); ?></td>
+            <td>
+              <?php if (!empty($debt->contact_name)) {
+                echo '<span class="badge bg-info">' . htmlspecialchars($debt->contact_name) . '</span>';
+              } else {
+                echo '<span class="text-muted">-</span>';
+              } ?>
+            </td>
             <td><?php echo nl2br(htmlspecialchars($debt->description)); ?></td>
             <td><?php echo htmlspecialchars($debt->due_date); ?></td>
             <td><?php echo $debt->is_paid ? '<span class="badge bg-success">Paid</span>' : '<span class="badge bg-warning text-dark">Unpaid</span>'; ?></td>
@@ -42,7 +50,7 @@
           </tr>
         <?php endforeach; ?>
         <?php if (empty($debts)): ?>
-          <tr><td colspan="6" class="text-center text-muted">No debts found.</td></tr>
+          <tr><td colspan="7" class="text-center text-muted">No debts found.</td></tr>
         <?php endif; ?>
       </tbody>
     </table>

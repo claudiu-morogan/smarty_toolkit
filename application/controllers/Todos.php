@@ -1,6 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Todos controller
+ *
+ * @property CI_Input $input
+ * @property CI_Session $session
+ * @property CI_Form_validation $form_validation
+ * @property Todo_model $Todo_model
+ * @property User_model $User_model
+ */
 class Todos extends CI_Controller {
     public function planner() {
         $user_id = $this->session->userdata('user_id');
@@ -44,15 +53,21 @@ class Todos extends CI_Controller {
         $this->load->view('todos/index', $data);
     }
     public function add() {
+        $this->load->library('form_validation');
         if ($this->input->method() === 'post') {
-            $data = [
-                'user_id' => $this->session->userdata('user_id'),
-                'title' => $this->input->post('title'),
-                'description' => $this->input->post('description'),
-                'due_date' => $this->input->post('due_date') ?: null
-            ];
-            $this->Todo_model->add($data);
-            redirect('todos');
+            $this->form_validation->set_rules('title', 'Title', 'required|trim|max_length[255]');
+            $this->form_validation->set_rules('description', 'Description', 'trim');
+            $this->form_validation->set_rules('due_date', 'Due Date', 'trim');
+            if ($this->form_validation->run() === TRUE) {
+                $data = [
+                    'user_id' => $this->session->userdata('user_id'),
+                    'title' => $this->input->post('title', TRUE),
+                    'description' => $this->input->post('description', TRUE),
+                    'due_date' => $this->input->post('due_date', TRUE) ?: null
+                ];
+                $this->Todo_model->add($data);
+                redirect('todos');
+            }
         }
         $this->load->view('todos/add');
     }
@@ -60,15 +75,21 @@ class Todos extends CI_Controller {
         $user_id = $this->session->userdata('user_id');
         $todo = $this->Todo_model->get($id, $user_id);
         if (!$todo) show_404();
+        $this->load->library('form_validation');
         if ($this->input->method() === 'post') {
-            $data = [
-                'title' => $this->input->post('title'),
-                'description' => $this->input->post('description'),
-                'is_done' => $this->input->post('is_done') ? 1 : 0,
-                'due_date' => $this->input->post('due_date') ?: null
-            ];
-            $this->Todo_model->update($id, $user_id, $data);
-            redirect('todos');
+            $this->form_validation->set_rules('title', 'Title', 'required|trim|max_length[255]');
+            $this->form_validation->set_rules('description', 'Description', 'trim');
+            $this->form_validation->set_rules('due_date', 'Due Date', 'trim');
+            if ($this->form_validation->run() === TRUE) {
+                $data = [
+                    'title' => $this->input->post('title', TRUE),
+                    'description' => $this->input->post('description', TRUE),
+                    'is_done' => $this->input->post('is_done') ? 1 : 0,
+                    'due_date' => $this->input->post('due_date', TRUE) ?: null
+                ];
+                $this->Todo_model->update($id, $user_id, $data);
+                redirect('todos');
+            }
         }
         $this->load->view('todos/edit', ['todo' => $todo]);
     }

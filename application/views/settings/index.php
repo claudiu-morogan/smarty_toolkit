@@ -5,7 +5,7 @@
     <?php if (isset($success)): ?>
       <div class="alert alert-success">Preferences updated!</div>
     <?php endif; ?>
-    <form method="post">
+  <?php echo form_open(); ?>
       <div class="mb-3">
         <label for="theme" class="form-label">Theme</label>
         <select name="theme" id="theme" class="form-select">
@@ -64,7 +64,7 @@
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Save Preferences</button>
-    </form>
+  </form>
   </div>
 </div>
 <?php include APPPATH.'views/footer.php'; ?>

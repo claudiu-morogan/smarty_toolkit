@@ -31,4 +31,9 @@ class User_model extends CI_Model {
             'preferences' => json_encode($prefs)
         ]);
     }
+
+    public function get_all_except($exclude_user_id) {
+        $this->db->where('id !=', $exclude_user_id);
+        return $this->db->get('users')->result();
+    }
 }

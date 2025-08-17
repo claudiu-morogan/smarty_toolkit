@@ -1,6 +1,27 @@
 
 
 <?php $title = 'Dashboard'; include APPPATH.'views/header.php'; ?>
+<style>
+.spinner-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(255,255,255,0.7);
+    z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+}
+</style>
+<div id="dashboard-spinner" class="spinner-overlay">
+    <div class="spinner-border text-primary" style="width:3rem;height:3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.getElementById('dashboard-spinner').style.display = 'none';
+    }, 500); // Simulate load, remove spinner after 0.5s
+});
+</script>
 <div class="container py-4">
     <?php if (!empty($dashboard_cards['calendar'])): ?>
     <div class="mb-4">
@@ -78,6 +99,22 @@
                     </p>
                     <a href="<?php echo site_url('habits'); ?>" class="btn btn-warning btn-sm">View Habits</a>
                     <a href="<?php echo site_url('habits/add'); ?>" class="btn btn-outline-warning btn-sm">Add</a>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+        <!-- Contacts Card -->
+        <?php if (!empty($dashboard_cards['contacts'])): ?>
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Contacts</h5>
+                    <?php $contacts_count = isset($contacts) ? count($contacts) : 0; ?>
+                    <p class="card-text">
+                        <strong><?php echo $contacts_count; ?></strong> contacts
+                    </p>
+                    <a href="<?php echo site_url('contacts'); ?>" class="btn btn-success btn-sm">View Contacts</a>
+                    <a href="<?php echo site_url('contacts/add'); ?>" class="btn btn-outline-success btn-sm">Add</a>
                 </div>
             </div>
         </div>

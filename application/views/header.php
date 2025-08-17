@@ -64,6 +64,7 @@
                 <li class="nav-item"><a class="nav-link" href="<?php echo site_url('debts'); ?>">Debts</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo site_url('notes'); ?>">Notes</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo site_url('habits'); ?>">Habits</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo site_url('contacts'); ?>">Contacts</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo site_url('settings'); ?>">Settings</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo site_url('auth/logout'); ?>">Logout</a></li>
             <?php else: ?>

@@ -14,7 +14,12 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body">
                 <h5 class="card-title mb-2"><?php echo htmlspecialchars($note->title); ?></h5>
-                <div class="card-text text-truncate" style="max-height:4.5em;overflow:hidden;">
+                  <div class="card-text text-truncate" style="max-height:4.5em;overflow:hidden;">
+                    <td>
+                      <?php if (!empty($note->contact_name)) {
+                        echo '<span class="badge bg-info">' . htmlspecialchars($note->contact_name) . '</span>';
+                      } ?>
+                    </td>
                   <?php echo nl2br(htmlspecialchars(mb_substr($note->content,0,180))); ?>
                 </div>
               </div>

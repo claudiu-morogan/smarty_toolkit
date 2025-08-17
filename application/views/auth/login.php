@@ -4,7 +4,7 @@
         <div class="card shadow-sm">
             <div class="card-body">
                 <h3 class="card-title mb-4">Login</h3>
-                <form method="post">
+                <?php echo form_open(); ?>
                     <div class="mb-3">
                         <label class="form-label">Username</label>
                         <input type="text" name="username" class="form-control" required>

@@ -31,10 +31,12 @@ class Dashboard extends CI_Controller {
      */
     public function index() {
         $user_id = $this->session->userdata('user_id');
-        $data['todos'] = $this->Todo_model->get_all($user_id);
-        $data['debts'] = $this->Debt_model->get_all($user_id);
-        $data['reminders'] = $this->Debt_model->get_reminders($user_id);
-        $data['habits'] = $this->Habit_model->get_all($user_id);
+    $data['todos'] = $this->Todo_model->get_all($user_id);
+    $data['debts'] = $this->Debt_model->get_all($user_id);
+    $data['reminders'] = $this->Debt_model->get_reminders($user_id);
+    $data['habits'] = $this->Habit_model->get_all($user_id);
+    $this->load->model('Contact_model', 'Contact_model');
+    $data['contacts'] = $this->Contact_model->get_all($user_id);
         $today = date('Y-m-d');
         $habits_today = array();
         foreach ($data['habits'] as $habit) {
@@ -52,7 +54,7 @@ class Dashboard extends CI_Controller {
         // User dashboard card/module preferences
         $this->load->model('User_model');
         $prefs = $this->User_model->get_preferences($user_id);
-        $default_cards = ['todos'=>1,'debts'=>1,'notes'=>1,'habits'=>1,'calendar'=>1];
+    $default_cards = ['todos'=>1,'debts'=>1,'notes'=>1,'habits'=>1,'calendar'=>1,'contacts'=>1];
         $data['dashboard_cards'] = isset($prefs['dashboard_cards']) ? $prefs['dashboard_cards'] : $default_cards;
         $this->load->view('dashboard/index', $data);
     }

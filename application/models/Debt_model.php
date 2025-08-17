@@ -1,10 +1,19 @@
 <?php
 class Debt_model extends CI_Model {
     public function get_all($user_id) {
-        return $this->db->where('user_id', $user_id)->order_by('due_date', 'asc')->get('debts')->result();
+        $this->db->select('debts.*, contacts.name as contact_name');
+        $this->db->from('debts');
+        $this->db->where('debts.user_id', $user_id);
+        $this->db->join('contacts', 'contacts.id = debts.contact_id', 'left');
+        $this->db->order_by('debts.due_date', 'asc');
+        return $this->db->get()->result();
     }
     public function get($id, $user_id) {
-        return $this->db->where(['id' => $id, 'user_id' => $user_id])->get('debts')->row();
+        $this->db->select('debts.*, contacts.name as contact_name');
+        $this->db->from('debts');
+        $this->db->where(['debts.id' => $id, 'debts.user_id' => $user_id]);
+        $this->db->join('contacts', 'contacts.id = debts.contact_id', 'left');
+        return $this->db->get()->row();
     }
     public function add($data) {
         return $this->db->insert('debts', $data);

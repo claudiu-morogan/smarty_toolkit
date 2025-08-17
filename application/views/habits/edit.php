@@ -1,7 +1,7 @@
 <?php $this->load->view('header'); ?>
 <div class="container py-4">
     <h2 class="text-warning mb-4">Edit Habit</h2>
-    <form method="post" class="bg-white p-4 rounded shadow-sm">
+    <?php echo form_open('', ['class'=>'bg-white p-4 rounded shadow-sm']); ?>
         <div class="mb-3">
             <label class="form-label">Name</label>
             <input type="text" name="name" class="form-control" value="<?= htmlspecialchars($habit->name) ?>" required>
